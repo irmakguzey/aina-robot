@@ -1,6 +1,286 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello from my project site!</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="AINA: Dexterity from Smart Lenses">
+  <meta name="keywords" content="Robot Hand manipulation, Robot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AINA | Dexterity from Smart Lenses: Multi-Fingered Robot Manipulation with In-The-Wild Human Demonstrations
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script defer src="./static/js/fontawesome.all.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/8a0d0cac45.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Dexterity from Smart Lenses: Multi-Fingered Robot
+              Manipulation with In-The-Wild Human Demonstrations</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- <div class="column"> -->
+          <div class="publication-video">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/main_video_compressed.mp4" type="video/mp4">
+            </video>
+
+            <!-- <body>
+              <iframe width="800" height="449" src="https://www.youtube.com/embed/wOoxHvmC"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </body> -->
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Learning multi-fingered robot policies from humans performing
+              daily tasks in natural environments has long been a grand goal
+              in the robotics community. Achieving this would mark significant
+              progress toward generalizable robot manipulation in human environments,
+              as it would reduce the reliance on labor-intensive robot interaction data collection.
+              Despite substantial efforts, progress toward this goal has been bottle-necked
+              by the embodiment gap between humans and robots, as well as by difficulties
+              in extracting relevant contextual and motion cues that enable
+              learning of autonomous policies from in-the-wild human videos.
+              We claim that with simple yet sufficiently powerful hardware
+              for obtaining human data and our proposed framework AINA, we are now one significant step closer to
+              achieving this dream.
+
+            </p>
+            <p>
+              AINA enables learning multi-fingered policies from data collected by anyone,
+              anywhere, and in any environment using Aria Gen 2 glasses.
+              These glasses are lightweight and portable, feature a high-resolution
+              RGB camera, provide accurate on-board 3D head and hand poses,
+              and offer a wide stereo view that can be leveraged for depth
+              estimation of the scene. This setup enables the learning of 3D
+              point-based policies for multi-fingered hands that are robust to
+              background changes and can be deployed directly without requiring any
+              robot data (including online corrections, reinforcement learning, or simulation).
+            
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Rollouts</h2>
+          <div class="content">
+            <p>We show autonomous rollouts with AINA for five different manipulation tasks below.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Cup Pouring</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/pouring_comp_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Planar Reorientation</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/planar_comp_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Toaster Press</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/toaster_cropped_comp_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Toy Picking</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/toy_picking_cropped_comp_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Wiping</h3>
+            <video id="dollyzoom" controls muted loop playsinline width="50%">
+              <source src="./static/videos/wiping_cropped_comp_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Human Demonstration Domain Alignment</h2>
+          <div class="content">
+            <p>In AINA, we use a single in-scene human demonstration as an anchor to align all in-the-wild human demonstrations. 
+              Specifically, we shift the object and hand points using the demonstrations’ center of mass, and we 
+              align their orientations by applying a rotation around the hands’ gravity axis. 
+              Here, we illustrate the importance of both steps and show how the alignment appears when either the shifting or rotation is omitted.
+              In all the videos below, the red points (light: hand, dark: object) represent 
+              the in-the-wild demonstration being transformed, while the blue points (light: hand, dark: object) 
+              represent the in-scene demonstration. The in-scene demonstration remains the same across 
+              all videos, whereas the transformed in-the-wild demonstrations vary depending on the alignment method.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">AINA</h3>
+            <p>We showcase how the alignment looks like when both the shifting and rotation are applied. </p>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/demos_overlapped_rotated_and_translated.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">No Rotation</h3>
+            <p>We illustrate how the alignment appears when only shifting is applied. 
+              As shown, because the world frame is assigned randomly during in-the-wild 
+              data collection, the rotation of the hand points cannot be predicted, 
+              and their orientation may be significantly misaligned. In this case, 
+              the hand is fully rotated, and the object positions appear swapped.
+            </p>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/demo_overlapped_translated.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">No Shifting and Rotation</h3>
+            <p>We illustrate how the alignment appears when neither shifting nor rotation is applied. 
+              As shown, although all objects lie on a similar plane, their positions are significantly misaligned.
+            </p>
+            <video id="dollyzoom" controls muted loop playsinline width="50%">
+              <source src="./static/videos/demos_overlapped_initial.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

@@ -1,0 +1,2 @@
+# static/videos/bread_picking_comp.mp4 filter=lfs diff=lfs merge=lfs -text
+* filter=lfs diff=lfs merge=lfs -text
